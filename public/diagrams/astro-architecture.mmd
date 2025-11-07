@@ -1,0 +1,64 @@
+graph TB
+    subgraph "Source Files"
+        A[.astro Components<br/>UI Framework Components]
+        B[.md/.mdx Files<br/>Content with Frontmatter]
+        C[Static Assets<br/>Images, Fonts, CSS]
+        D[astro.config.mjs<br/>Configuration]
+    end
+
+    subgraph "Astro Build Engine"
+        E[Vite Dev Server<br/>HMR & Fast Refresh]
+        F[Astro Compiler<br/>Parse .astro syntax]
+        G[Component Islands<br/>Selective Hydration]
+        H[Static Site Generator<br/>SSG by default]
+    end
+
+    subgraph "Build Output"
+        I[HTML Pages<br/>Zero JS by default]
+        J[Optimized Assets<br/>Images, CSS, Fonts]
+        K[Hydration Scripts<br/>Only for interactive islands]
+        L[Server-Side Rendering<br/>Optional SSR mode]
+    end
+
+    subgraph "Runtime Features"
+        M[File-based Routing<br/>pages/ directory]
+        N[Partial Hydration<br/>Client directives]
+        O[Island Architecture<br/>Framework agnostic]
+        P[Content Collections<br/>Type-safe content]
+    end
+
+    A --> F
+    B --> F
+    C --> E
+    D --> E
+
+    F --> G
+    G --> H
+    E --> H
+
+    H --> I
+    H --> J
+    H --> K
+    H --> L
+
+    M --> H
+    N --> G
+    O --> G
+    P --> F
+
+    style A fill:#4a9eff,stroke:#2563eb,color:#fff
+    style B fill:#4a9eff,stroke:#2563eb,color:#fff
+    style C fill:#4a9eff,stroke:#2563eb,color:#fff
+    style D fill:#4a9eff,stroke:#2563eb,color:#fff
+    style E fill:#ec4899,stroke:#db2777,color:#fff
+    style F fill:#ec4899,stroke:#db2777,color:#fff
+    style G fill:#ec4899,stroke:#db2777,color:#fff
+    style H fill:#ec4899,stroke:#db2777,color:#fff
+    style I fill:#10b981,stroke:#059669,color:#fff
+    style J fill:#10b981,stroke:#059669,color:#fff
+    style K fill:#10b981,stroke:#059669,color:#fff
+    style L fill:#10b981,stroke:#059669,color:#fff
+    style M fill:#f59e0b,stroke:#d97706,color:#fff
+    style N fill:#f59e0b,stroke:#d97706,color:#fff
+    style O fill:#f59e0b,stroke:#d97706,color:#fff
+    style P fill:#f59e0b,stroke:#d97706,color:#fff

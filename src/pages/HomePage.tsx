@@ -26,6 +26,13 @@ const availableSubjects: Subject[] = [
     description:
       "Master deep learning fundamentals with PyTorch framework for research and production",
   },
+  {
+    id: "astro",
+    name: "Astro Web Framework",
+    path: "/docs/astro",
+    description:
+      "Build fast, content-driven websites with Astro's island architecture and zero JavaScript by default",
+  },
 ];
 
 // Total number of tiles to display
